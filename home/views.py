@@ -3,5 +3,5 @@ from django.http import HttpResponse
 # Create your views here.
 
 def index(request):
-    title = '菜單系統'
+    title = '首頁'
     return render(request,'home/index.html',locals())
