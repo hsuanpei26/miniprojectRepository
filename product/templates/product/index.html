@@ -1,0 +1,49 @@
+
+{% extends "base.html" %} 
+
+{% block style %}
+<style>
+    th
+    {
+        text-align:center;
+    }
+
+    td
+    {
+         text-align:center;
+    }
+    
+</style>
+{% endblock %}
+
+{% block body %}
+<div class="container">
+    <a class="btn btn-primary mb-3" href="{% url 'product:create' %}" role="button"><i class="fa fa-plus-square" aria-hidden="true"></i> 新增</a>
+    <table class="table table-striped  mb-0">
+        <thead class="table-danger">
+            <tr>
+                <th scope="col">項目</th>
+                <th scope="col">類別</th>
+                <th scope="col">名稱</th>
+                <th scope="col">價錢</th>
+                <th scope="col">廠商</th>
+                <th scope="col">編輯</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for pro in datas %}
+            <tr>                
+                <td style="vertical-align:middle;">{{pro.0}}</td>
+                <td style="vertical-align:middle;">{{pro.1}}</td>
+                <td style="vertical-align:middle;">{{pro.2}}</td>
+                <td style="vertical-align:middle;">{{pro.3}}</td>
+                <td style="vertical-align:middle;">{{pro.4}}</td>
+                <!-- <td style="vertical-align:middle;"><img src="../../media/{{pro.4}}" class="img-thumbnail" style="width: 150px"></td> -->
+                <td style="vertical-align:middle;"><a class="btn btn-info mb-3" href="{% url 'product:update' pro.0 %}" role="button"><i class="fa fa-pencil-square-o" aria-hidden="true"></i> 修改</a><br>
+                <a class="btn btn-danger" href="{% url 'product:delete' pro.0 %}" role="button"><i class="fa fa-minus-square" aria-hidden="true"></i> 刪除</a></td>                       
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+</div>
+{% endblock %}
