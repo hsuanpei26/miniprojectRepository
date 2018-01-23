@@ -9,6 +9,8 @@ def index(request):
     
     #todo 讀取會員資料傳給index.html
     members = Member.objects.all()
+
+    title = '店員列表'
     return render(request,'member/index.html',locals())
 
 def create(request):
@@ -23,7 +25,8 @@ def create(request):
 
         #todo 新增完成後轉到http://localhost:8000/member
         return redirect("/member")
-     
+
+    title = '新增店員' 
     return render(request,'member/create.html',locals())
 
 def update(request,id):
@@ -41,6 +44,7 @@ def update(request,id):
         #todo 修改完成後轉到http://localhost:8000/member
         return redirect('/member')
     
+    title = '修改店員'
     #todo 根據會員編號取得會員資料傳給update.html
     member = Member.objects.get(id=int(id))
     return render(request,'member/update.html',locals())

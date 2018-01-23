@@ -1,0 +1,287 @@
+{% extends "base.html" %} {% block style %}
+<style>
+    .ui-tabs-vertical {
+        width: 41em;
+    }
+
+    .ui-tabs-vertical .ui-tabs-nav {
+        margin-right: 1em;
+        padding: .2em .1em .2em .2em;
+        float: left;
+        width: 6em;
+        height: 40em;
+    }
+
+    .ui-tabs-vertical .ui-tabs-nav li {
+        clear: left;
+        width: 100%;
+        border-bottom-width: 1px !important;
+        border-right-width: 0 !important;
+
+    }
+
+    .ui-tabs-vertical .ui-tabs-nav li a {
+        display: block;
+    }
+
+    .ui-tabs-vertical .ui-tabs-nav li.ui-tabs-active {
+        padding-bottom: 0;
+        padding-right: .1em;
+        border-right-width: 1px;
+    }
+
+    .ui-tabs-vertical .ui-tabs-panel {
+        padding: 2em;
+        width: 35em;
+    }
+
+    .ui-tabs-vertical .ui-tabs-panel input {
+        margin-bottom: 1.3em;
+
+    }
+
+    table tr th,
+    td {
+        border: 2px solid black;
+        padding: 5px;
+        width: 20em;
+        text-align: center;
+    }
+</style>
+{% endblock %} {% block body %}
+<div class="container">
+    <div class="row">
+        <div class="col-6 ">
+            <div id="tabs">
+                <ul>
+                    <li>
+                        <a href="#tabs-1">烤吐司類</a>
+                    </li>
+                    <li>
+                        <a href="#tabs-2">蛋餅類</a>
+                    </li>
+                    <li>
+                        <a href="#tabs-3">鐵板麵類</a>
+                    </li>
+                    <li>
+                        <a href="#tabs-4">漢堡類</a>
+                    </li>
+                    <li>
+                        <a href="#tabs-5">加點類</a>
+                    </li>
+                    <li>
+                        <a href="#tabs-6">飲料類</a>
+                    </li>
+                    <li>
+                        <a href="#tabs-7">炒飯類</a>
+                    </li>
+                    <li>
+                        <a href="#tabs-8">炒麵類</a>
+                    </li>
+                    <li>
+                        <a href="#tabs-9">套餐類</a>
+                    </li>
+                    <li>
+                        <a href="#tabs-10">客製化</a>
+                    </li>
+                </ul>
+                <div id="tabs-1">
+                    <input class="btn btn-info" type="button" name="{{datas.0.3}}" value="{{datas.0.2}}">
+                    <input class="btn btn-info" type="button" name="{{datas.1.3}}" value="{{datas.1.2}}">
+                    <input class="btn btn-info" type="button" name="{{datas.2.3}}" value="{{datas.2.2}}">
+                    <input class="btn btn-info" type="button" name="{{datas.3.3}}" value="{{datas.3.2}}">
+                    <input class="btn btn-info" type="button" name="{{datas.4.3}}" value="{{datas.4.2}}">
+                    <input class="btn btn-info" type="button" name="{{datas.5.3}}" value="{{datas.5.2}}">
+                    <input class="btn btn-info" type="button" name="{{datas.6.3}}" value="{{datas.6.2}}">
+                    <input class="btn btn-info" type="button" name="{{datas.7.3}}" value="{{datas.7.2}}">
+                    <input class="btn btn-info" type="button" name="{{datas.8.3}}" value="{{datas.8.2}}">
+                    <input class="btn btn-info" type="button" name="{{datas.9.3}}" value="{{datas.9.2}}">
+                    <input class="btn btn-info" type="button" name="{{datas.10.3}}" value="{{datas.10.2}}">
+                    <input class="btn btn-info" type="button" name="{{datas.11.3}}" value="{{datas.11.2}}">
+                    <input class="btn btn-info" type="button" name="{{datas.12.3}}" value="{{datas.12.2}}">
+                    <input class="btn btn-info" type="button" name="{{datas.13.3}}" value="{{datas.13.2}}">
+                    <input class="btn btn-info" type="button" name="{{datas.14.3}}" value="{{datas.14.2}}">
+                    <input class="btn btn-info" type="button" name="{{datas.15.3}}" value="{{datas.15.2}}">
+                    <input class="btn btn-info" type="button" name="{{datas.16.3}}" value="{{datas.16.2}}">
+                    <input class="btn btn-info" type="button" name="{{datas.17.3}}" value="{{datas.17.2}}">
+                    <input class="btn btn-info" type="button" name="{{datas.18.3}}" value="{{datas.18.2}}">
+                    <input class="btn btn-info" type="button" name="{{datas.19.3}}" value="{{datas.19.2}}">
+                    <input class="btn btn-info" type="button" name="{{datas.20.3}}" value="{{datas.20.2}}">
+                    <input class="btn btn-info" type="button" name="{{datas.21.3}}" value="{{datas.21.2}}">
+                    <input class="btn btn-info" type="button" name="{{datas.22.3}}" value="{{datas.22.2}}">
+                    <input class="btn btn-info" type="button" name="{{datas.23.3}}" value="{{datas.23.2}}">
+                    <input class="btn btn-info" type="button" name="{{datas.24.3}}" value="{{datas.24.2}}">
+                    <input class="btn btn-info" type="button" name="{{datas.25.3}}" value="{{datas.25.2}}">
+                    <input class="btn btn-info" type="button" name="{{datas.26.3}}" value="{{datas.26.2}}">
+                    <input class="btn btn-info" type="button" name="{{datas.27.3}}" value="{{datas.27.2}}">
+                    <!-- <input class="btn btn-info" type="button" name="{{datas..3}}" value="{{datas..2}}"> -->
+
+                </div>
+                <div id="tabs-2">
+                    <input class="btn btn-info" type="button" name="{{datas.28.3}}" value="{{datas.28.2}}">
+                    <input class="btn btn-info" type="button" name="{{datas.29.3}}" value="{{datas.29.2}}">
+                    <input class="btn btn-info" type="button" name="{{datas.30.3}}" value="{{datas.30.2}}">
+                    <input class="btn btn-info" type="button" name="{{datas.31.3}}" value="{{datas.31.2}}">
+                    <input class="btn btn-info" type="button" name="{{datas.32.3}}" value="{{datas.32.2}}">
+                    <input class="btn btn-info" type="button" name="{{datas.33.3}}" value="{{datas.33.2}}">
+                    <input class="btn btn-info" type="button" name="{{datas.34.3}}" value="{{datas.34.2}}">
+                    <input class="btn btn-info" type="button" name="{{datas.35.3}}" value="{{datas.35.2}}">
+                    <input class="btn btn-info" type="button" name="{{datas.36.3}}" value="{{datas.36.2}}">
+                    <input class="btn btn-info" type="button" name="{{datas.37.3}}" value="{{datas.37.2}}">
+                    <input class="btn btn-info" type="button" name="{{datas.38.3}}" value="{{datas.38.2}}">
+                    <input class="btn btn-info" type="button" name="{{datas.39.3}}" value="{{datas.39.2}}">
+                    <input class="btn btn-info" type="button" name="{{datas.40.3}}" value="{{datas.40.2}}">
+                </div>
+                <div id="tabs-3">
+                    <input class="btn btn-info" type="button" name="{{datas.41.3}}" value="{{datas.41.2}}">
+                    <input class="btn btn-info" type="button" name="{{datas.42.3}}" value="{{datas.42.2}}">
+                </div>
+                <div id="tabs-4">
+                    <input class="btn btn-info" type="button" name="{{datas.43.3}}" value="{{datas.43.2}}">
+                    <input class="btn btn-info" type="button" name="{{datas.44.3}}" value="{{datas.44.2}}">
+                    <input class="btn btn-info" type="button" name="{{datas.45.3}}" value="{{datas.45.2}}">
+                    <input class="btn btn-info" type="button" name="{{datas.46.3}}" value="{{datas.46.2}}">
+                    <input class="btn btn-info" type="button" name="{{datas.47.3}}" value="{{datas.47.2}}">
+                    <input class="btn btn-info" type="button" name="{{datas.48.3}}" value="{{datas.48.2}}">
+                    <input class="btn btn-info" type="button" name="{{datas.49.3}}" value="{{datas.49.2}}">
+                    <input class="btn btn-info" type="button" name="{{datas.50.3}}" value="{{datas.50.2}}">
+                    <input class="btn btn-info" type="button" name="{{datas.51.3}}" value="{{datas.51.2}}">
+                    <input class="btn btn-info" type="button" name="{{datas.52.3}}" value="{{datas.52.2}}">
+                    <input class="btn btn-info" type="button" name="{{datas.53.3}}" value="{{datas.53.2}}">
+                    <input class="btn btn-info" type="button" name="{{datas.54.3}}" value="{{datas.54.2}}">                    
+                    <input class="btn btn-info" type="button" name="{{datas.55.3}}" value="{{datas.55.2}}">
+                </div>
+                <div id="tabs-5">
+                    <input class="btn btn-info" type="button" name="{{datas.56.3}}" value="{{datas.56.2}}">
+                    <input class="btn btn-info" type="button" name="{{datas.57.3}}" value="{{datas.57.2}}">
+                    <input class="btn btn-info" type="button" name="{{datas.58.3}}" value="{{datas.58.2}}">
+                    <input class="btn btn-info" type="button" name="{{datas.59.3}}" value="{{datas.59.2}}">
+                    <input class="btn btn-info" type="button" name="{{datas.60.3}}" value="{{datas.60.2}}">
+                    <input class="btn btn-info" type="button" name="{{datas.61.3}}" value="{{datas.61.2}}">
+                    <input class="btn btn-info" type="button" name="{{datas.62.3}}" value="{{datas.62.2}}">
+                    <input class="btn btn-info" type="button" name="{{datas.63.3}}" value="{{datas.63.2}}">
+                    <input class="btn btn-info" type="button" name="{{datas.64.3}}" value="{{datas.64.2}}">
+                    <input class="btn btn-info" type="button" name="{{datas.65.3}}" value="{{datas.65.2}}">
+                    <input class="btn btn-info" type="button" name="{{datas.66.3}}" value="{{datas.66.2}}">
+                    <input class="btn btn-info" type="button" name="{{datas.67.3}}" value="{{datas.67.2}}">
+                    <input class="btn btn-info" type="button" name="{{datas.68.3}}" value="{{datas.68.2}}">
+                    <input class="btn btn-info" type="button" name="{{datas.69.3}}" value="{{datas.69.2}}">
+                    <input class="btn btn-info" type="button" name="{{datas.70.3}}" value="{{datas.70.2}}">
+                    <input class="btn btn-info" type="button" name="{{datas.71.3}}" value="{{datas.71.2}}">
+                    <input class="btn btn-info" type="button" name="{{datas.72.3}}" value="{{datas.72.2}}">
+                </div>
+                <div id="tabs-6">
+                    <input class="btn btn-info" type="button" name="{{datas.73.3}}" value="{{datas.73.2}}">
+                    <input class="btn btn-info" type="button" name="{{datas.74.3}}" value="{{datas.74.2}}">
+                    <input class="btn btn-info" type="button" name="{{datas.75.3}}" value="{{datas.75.2}}">
+                    <input class="btn btn-info" type="button" name="{{datas.76.3}}" value="{{datas.76.2}}">
+                    <input class="btn btn-info" type="button" name="{{datas.77.3}}" value="{{datas.77.2}}">
+                    <input class="btn btn-info" type="button" name="{{datas.78.3}}" value="{{datas.78.2}}">
+                    <input class="btn btn-info" type="button" name="{{datas.79.3}}" value="{{datas.79.2}}">
+                    <input class="btn btn-info" type="button" name="{{datas.80.3}}" value="{{datas.80.2}}">
+                    <input class="btn btn-info" type="button" name="{{datas.81.3}}" value="{{datas.81.2}}">
+                    <input class="btn btn-info" type="button" name="{{datas.82.3}}" value="{{datas.82.2}}">
+                    <input class="btn btn-info" type="button" name="{{datas.83.3}}" value="{{datas.83.2}}">
+                    <input class="btn btn-info" type="button" name="{{datas.84.3}}" value="{{datas.84.2}}">
+                </div>
+                <div id="tabs-7">
+                    <input class="btn btn-info" type="button" name="{{datas.85.3}}" value="{{datas.85.2}}">
+                    <input class="btn btn-info" type="button" name="{{datas.86.3}}" value="{{datas.86.2}}">
+                    <input class="btn btn-info" type="button" name="{{datas.87.3}}" value="{{datas.87.2}}">
+                    <input class="btn btn-info" type="button" name="{{datas.88.3}}" value="{{datas.88.2}}">
+                    <input class="btn btn-info" type="button" name="{{datas.89.3}}" value="{{datas.89.2}}">
+                    <input class="btn btn-info" type="button" name="{{datas.90.3}}" value="{{datas.90.2}}">
+                    <input class="btn btn-info" type="button" name="{{datas.91.3}}" value="{{datas.91.2}}">
+                </div>
+                <div id="tabs-8">
+                    <input class="btn btn-info" type="button" name="{{datas.92.3}}" value="{{datas.92.2}}">
+                    <input class="btn btn-info" type="button" name="{{datas.93.3}}" value="{{datas.93.2}}">
+                    <input class="btn btn-info" type="button" name="{{datas.94.3}}" value="{{datas.94.2}}">
+                    <input class="btn btn-info" type="button" name="{{datas.95.3}}" value="{{datas.95.2}}">
+                    <input class="btn btn-info" type="button" name="{{datas.96.3}}" value="{{datas.96.2}}">
+                    <input class="btn btn-info" type="button" name="{{datas.97.3}}" value="{{datas.97.2}}">
+                    <input class="btn btn-info" type="button" name="{{datas.98.3}}" value="{{datas.98.2}}">
+                </div>
+                <div id="tabs-9">
+                    <input class="btn btn-info" type="button" name="{{datas.99.3}}" value="{{datas.99.2}}">
+                    <input class="btn btn-info" type="button" name="{{datas.100.3}}" value="{{datas.100.2}}">
+                    <input class="btn btn-info" type="button" name="{{datas.101.3}}" value="{{datas.101.2}}">
+                    <input class="btn btn-info" type="button" name="{{datas.102.3}}" value="{{datas.102.2}}">
+                    <input class="btn btn-info" type="button" name="{{datas.103.3}}" value="{{datas.103.2}}">
+                    <input class="btn btn-info" type="button" name="{{datas.104.3}}" value="{{datas.104.2}}">
+                </div>
+                <div id="tabs-10">                        
+                        <input class="btn btn-info" type="button" name="{{datas.105.3}}" value="{{datas.105.2}}">
+                        <input class="btn btn-info" type="button" name="{{datas.106.3}}" value="{{datas.106.2}}">
+                        <input class="btn btn-info" type="button" name="{{datas.107.3}}" value="{{datas.107.2}}">
+                        <input class="btn btn-info" type="button" name="{{datas.108.3}}" value="{{datas.108.2}}">
+                        <input class="btn btn-info" type="button" name="{{datas.109.3}}" value="{{datas.109.2}}">
+                        <input class="btn btn-info" type="button" name="{{datas.110.3}}" value="{{datas.110.2}}">
+                        <input class="btn btn-info" type="button" name="{{datas.111.3}}" value="{{datas.111.2}}">
+                        <input class="btn btn-info" type="button" name="{{datas.112.3}}" value="{{datas.112.2}}">
+                        <input class="btn btn-info" type="button" name="{{datas.113.3}}" value="{{datas.113.2}}">
+                    </div>
+            </div>
+        </div>
+        <div class="card col">
+            <div class="card-body">
+                <table id="mt">
+                    <thead>
+                        <tr>
+                            <th>名稱</th>
+                            <th>價錢</th>
+                            <th>編輯</th>
+                        </tr>
+                    </thead>
+                    <tbody id="msg">
+
+                    </tbody>
+                    <tfoot>
+                        <tr>
+                            <th>
+                                <button type="button" class="btn btn-primary">總價計算：</button>
+                            </th>
+                            <th class="vTotal" colspan="2"></th>
+                        </tr>
+                    </tfoot>
+                </table>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %} {% block script %}
+<script>
+    var docFragment = $(document.createDocumentFragment()); //創造一個空容器
+
+    $(document).ready(function () {
+        $("#tabs").tabs().addClass("ui-tabs-vertical ui-helper-clearfix");
+        $("#tabs li").removeClass("ui-corner-top").addClass("ui-corner-left");
+        $('input').on('click', function () {
+            // alert($(this).val())
+            var value = $(this).attr("name");
+
+            var cell1 = $('<td></td>').text($(this).val());
+            var cell2 = $('<td></td>').text(value);
+            var cell3 = $('<td></td>').html('<button type="button" class="btn btn-danger">取消</button>');
+            var row = $('<tr></tr>').append([cell1, cell2, cell3]);
+            docFragment.append(row);
+            $('#msg').append(docFragment);
+        });
+
+        $("button").on('click', function (){
+            $('.vTotal').each(function (i){
+                var vTotal = 0;
+                $(this).parent().parent().parent()
+                    .find('td:nth-child(' + (i + 2) + ')')
+                    .each(function (i) {
+                        vTotal += parseInt($(this).text());
+                    });
+                $(this).text(vTotal);
+            });
+        });
+
+        $("#mt").on('click','.btn-danger',function (){
+            $(this).parents("tr").remove();
+        });
+    })
+</script> {% endblock %}

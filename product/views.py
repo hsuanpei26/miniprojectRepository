@@ -5,7 +5,8 @@ from django.core.files.storage import FileSystemStorage
 def index(request):
     menu = Menu()
     datas = menu.all()
-    
+
+    title = '餐點列表'
     # print(datas)
     return render(request,'product/index.html',locals())
 
@@ -29,9 +30,8 @@ def create(request):
         # fs.save(productimage,imgfile)
 
         return redirect("/product")
-
     
-    
+    title = '新增餐點'
     return render(request,'product/create.html',locals())
 
 def delete(request,id):
@@ -51,7 +51,14 @@ def update(request,id):
         menu.update(datas)
 
         return redirect("/product")
-
+    
+    title = '修改餐點'
     menu = Menu()
     singlepro = menu.single(id)
     return render(request,'product/update.html',locals())
+
+def bill(request):
+    title = '點餐'
+    menu = Menu()
+    datas = menu.all()   
+    return render(request,'product/bill.html',locals())
