@@ -47,6 +47,14 @@
         width: 20em;
         text-align: center;
     }
+
+    form {
+        margin-top: 2em;
+    }
+
+    p {
+        margin-bottom: 0;
+    }
 </style>
 {% endblock %} {% block body %}
 <div class="container">
@@ -83,6 +91,9 @@
                     </li>
                     <li>
                         <a href="#tabs-10">客製化</a>
+                    </li>
+                    <li>
+                        <a href="#tabs-11">內用外帶</a>
                     </li>
                 </ul>
                 <div id="tabs-1">
@@ -148,7 +159,7 @@
                     <input class="btn btn-info" type="button" name="{{datas.51.3}}" value="{{datas.51.2}}">
                     <input class="btn btn-info" type="button" name="{{datas.52.3}}" value="{{datas.52.2}}">
                     <input class="btn btn-info" type="button" name="{{datas.53.3}}" value="{{datas.53.2}}">
-                    <input class="btn btn-info" type="button" name="{{datas.54.3}}" value="{{datas.54.2}}">                    
+                    <input class="btn btn-info" type="button" name="{{datas.54.3}}" value="{{datas.54.2}}">
                     <input class="btn btn-info" type="button" name="{{datas.55.3}}" value="{{datas.55.2}}">
                 </div>
                 <div id="tabs-5">
@@ -210,17 +221,28 @@
                     <input class="btn btn-info" type="button" name="{{datas.103.3}}" value="{{datas.103.2}}">
                     <input class="btn btn-info" type="button" name="{{datas.104.3}}" value="{{datas.104.2}}">
                 </div>
-                <div id="tabs-10">                        
-                        <input class="btn btn-info" type="button" name="{{datas.105.3}}" value="{{datas.105.2}}">
-                        <input class="btn btn-info" type="button" name="{{datas.106.3}}" value="{{datas.106.2}}">
-                        <input class="btn btn-info" type="button" name="{{datas.107.3}}" value="{{datas.107.2}}">
-                        <input class="btn btn-info" type="button" name="{{datas.108.3}}" value="{{datas.108.2}}">
-                        <input class="btn btn-info" type="button" name="{{datas.109.3}}" value="{{datas.109.2}}">
-                        <input class="btn btn-info" type="button" name="{{datas.110.3}}" value="{{datas.110.2}}">
-                        <input class="btn btn-info" type="button" name="{{datas.111.3}}" value="{{datas.111.2}}">
-                        <input class="btn btn-info" type="button" name="{{datas.112.3}}" value="{{datas.112.2}}">
-                        <input class="btn btn-info" type="button" name="{{datas.113.3}}" value="{{datas.113.2}}">
-                    </div>
+                <div id="tabs-10">
+                    <input class="btn btn-info" type="button" name="{{datas.105.3}}" value="{{datas.105.2}}">
+                    <input class="btn btn-info" type="button" name="{{datas.106.3}}" value="{{datas.106.2}}">
+                    <input class="btn btn-info" type="button" name="{{datas.107.3}}" value="{{datas.107.2}}">
+                    <input class="btn btn-info" type="button" name="{{datas.108.3}}" value="{{datas.108.2}}">
+                    <input class="btn btn-info" type="button" name="{{datas.109.3}}" value="{{datas.109.2}}">
+                    <input class="btn btn-info" type="button" name="{{datas.110.3}}" value="{{datas.110.2}}">
+                    <input class="btn btn-info" type="button" name="{{datas.111.3}}" value="{{datas.111.2}}">
+                    <input class="btn btn-info" type="button" name="{{datas.112.3}}" value="{{datas.112.2}}">
+                    <input class="btn btn-info" type="button" name="{{datas.113.3}}" value="{{datas.113.2}}">
+                    <input class="btn btn-info" type="button" name="{{datas.114.3}}" value="{{datas.114.2}}">
+                    <input class="btn btn-info" type="button" name="{{datas.115.3}}" value="{{datas.115.2}}">
+                    <input class="btn btn-info" type="button" name="{{datas.116.3}}" value="{{datas.116.2}}">                    
+                </div>
+                <div id="tabs-11">
+                    <input class="btn btn-info" type="button" name="{{datas.117.3}}" value="{{datas.117.2}}">
+                    <input class="btn btn-info" type="button" name="{{datas.118.3}}" value="{{datas.118.2}}">
+                    <input class="btn btn-info" type="button" name="{{datas.119.3}}" value="{{datas.119.2}}">
+                    <input class="btn btn-info" type="button" name="{{datas.120.3}}" value="{{datas.120.2}}">
+                    <input class="btn btn-info" type="button" name="{{datas.121.3}}" value="{{datas.121.2}}">
+                    <input class="btn btn-info" type="button" name="{{datas.122.3}}" value="{{datas.122.2}}">
+                </div>
             </div>
         </div>
         <div class="card col">
@@ -239,12 +261,36 @@
                     <tfoot>
                         <tr>
                             <th>
-                                <button type="button" class="btn btn-primary">總價計算：</button>
+                                <button type="button" class="btn btn-primary" id="tol">總價計算：</button>
                             </th>
                             <th class="vTotal" colspan="2"></th>
                         </tr>
                     </tfoot>
                 </table>
+                <form method="POST">
+                    {% csrf_token %}
+                    <div class="form-row align-items-center">
+                        <div class="col-auto">
+                            <p>時間</p>
+                            <input type="text" class="form-control mb-2" id="time" name="time">
+                        </div>
+                        <div class="col-auto">
+                            <p>餐點</p>
+                            <input type="text" class="form-control mb-2" id="menuname" name="menuname">
+                        </div>
+                        <div class="col-auto">
+                            <p>總價</p>
+                            <input type="text" class="form-control mb-2" id="totalprice" name="totalprice">
+                        </div>
+                        <div class="col-auto">
+                            <p>櫃台人員</p>
+                            <input type="text" class="form-control mb-2" id="mname" name="mname">
+                        </div>
+                        <div class="col-auto">
+                            <button type="submit" class="btn btn-success mb-2">結帳</button>
+                        </div>
+                    </div>
+                </form>
             </div>
         </div>
     </div>
@@ -256,10 +302,9 @@
     $(document).ready(function () {
         $("#tabs").tabs().addClass("ui-tabs-vertical ui-helper-clearfix");
         $("#tabs li").removeClass("ui-corner-top").addClass("ui-corner-left");
-        $('input').on('click', function () {
+        $('.btn-info').on('click', function () {
             // alert($(this).val())
             var value = $(this).attr("name");
-
             var cell1 = $('<td></td>').text($(this).val());
             var cell2 = $('<td></td>').text(value);
             var cell3 = $('<td></td>').html('<button type="button" class="btn btn-danger">取消</button>');
@@ -268,8 +313,8 @@
             $('#msg').append(docFragment);
         });
 
-        $("button").on('click', function (){
-            $('.vTotal').each(function (i){
+        $("#tol").on('click', function () {
+            $('.vTotal').each(function (i) {
                 var vTotal = 0;
                 $(this).parent().parent().parent()
                     .find('td:nth-child(' + (i + 2) + ')')
@@ -278,9 +323,19 @@
                     });
                 $(this).text(vTotal);
             });
+            var date = moment().format('YYYY/MM/DD HH:mm:ss');
+            $('#time').attr("value", date);
+            var price = $('.vTotal').text();
+            $('#totalprice').attr("value", price);
+            var cmname = $.cookie('name')
+            $('#mname').attr("value", cmname);
+            $('.vTotal').each(function (j) {
+                var odder = $('td:nth-child(' + (j + 1) + ')').text();
+                $('#menuname').attr("value", odder);
+            });
         });
 
-        $("#mt").on('click','.btn-danger',function (){
+        $("#mt").on('click', '.btn-danger', function () {
             $(this).parents("tr").remove();
         });
     })

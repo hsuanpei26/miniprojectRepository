@@ -1,4 +1,27 @@
 {% extends 'base.html' %}
+{% load static %}
+{% block style %}
+<style>
+    pre{
+        display: inline;
+    }
+    #pos{
+        height: 300px;
+        float:right;
+    }
+    #fast{
+        width: 350px;        
+    }
+    #fast_e{
+        width: 350px;
+    }
+</style>
+{% endblock %}
+
 {% block body %}
-<h2>歡迎使用</h2>
+<img src="{% static 'images/POS.jpg'%}" alt="POS" id="pos">
+<pre><h1>POS系統</h1>
+<p><img src="{% static 'images/fast.png'%}" alt="快! 還要更快!" id="fast"></p>
+<p><img src="{% static 'images/fast2.png'%}" alt="Faster! faster!" id="fast_e"></p></pre>
+
 {% endblock %}

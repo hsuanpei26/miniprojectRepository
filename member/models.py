@@ -6,6 +6,7 @@ class Member(models.Model):
     password = models.CharField(max_length=10,null=False)
     useremail = models.EmailField(max_length=100,blank=True)
     userbirth = models.DateField(null=False)
+    tel = models.CharField(max_length=20,null=False)
         
     class Meta:
         db_table = "members"

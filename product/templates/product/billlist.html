@@ -1,0 +1,40 @@
+ {% extends "base.html" %} {% block style %}
+<style>
+    th {
+        text-align: center;
+    }
+
+    td {
+        text-align: center;
+    }
+</style>
+{% endblock %} {% block body %}
+<div class="container">
+    <table class="table table-striped  mb-0" id="billlist">
+        <thead class="table-danger">
+            <tr>
+                <th scope="col">時間</th>
+                <th scope="col">餐點</th>
+                <th scope="col">價錢</th>
+                <th scope="col">櫃台店員</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for b in datas %}
+            <tr>
+                <td style="vertical-align:middle;">{{b.1}}</td>
+                <td style="vertical-align:middle;">{{b.2}}</td>
+                <td style="vertical-align:middle;">{{b.3}}</td>
+                <td style="vertical-align:middle;">{{b.4}}</td>
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+</div>
+{% endblock %} 
+
+{% block script %}
+<script>
+    $('#billlist').DataTable();
+</script> 
+{% endblock %}

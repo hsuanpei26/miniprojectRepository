@@ -19,9 +19,10 @@ def create(request):
         password = request.POST["password"]
         useremail = request.POST["useremail"]
         userbirth = request.POST["userbirth"]
+        tel = request.POST["tel"]
 
         #todo 接收到的會員資料寫進資料庫
-        Member.objects.create(username=username,password=password,useremail=useremail,userbirth=userbirth)
+        Member.objects.create(username=username,password=password,useremail=useremail,userbirth=userbirth,tel=tel)
 
         #todo 新增完成後轉到http://localhost:8000/member
         return redirect("/member")
@@ -34,12 +35,14 @@ def update(request,id):
         username = request.POST["username"]      
         useremail = request.POST["useremail"]
         userbirth = request.POST["userbirth"]
+        tel = request.POST["tel"]
 
         #todo 修改資料庫中的會員資料
         member = Member.objects.get(id=int(id))
         member.username = username
         member.useremail = useremail
         member.userbirth = userbirth
+        member.tel = tel
         member.save()
         #todo 修改完成後轉到http://localhost:8000/member
         return redirect('/member')

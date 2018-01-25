@@ -1,5 +1,6 @@
 from django.shortcuts import render,redirect
 from .modelproduct import Menu
+from .modelbill import Bill
 from django.core.files.storage import FileSystemStorage
 # Create your views here.
 def index(request):
@@ -58,7 +59,30 @@ def update(request,id):
     return render(request,'product/update.html',locals())
 
 def bill(request):
+    
+    if request.method == "POST":        
+        time =request.POST['time']
+        menuname =request.POST['menuname']
+        totalprice =request.POST['totalprice']
+        mname =request.POST['mname']        
+
+        # 資料新增
+        bill = Bill()
+        datas = tuple([time,menuname,totalprice,mname])
+        bill.create(datas)
+
+        return redirect("../billlist")
+
     title = '點餐'
     menu = Menu()
     datas = menu.all()   
     return render(request,'product/bill.html',locals())
+
+def billlist(request):
+    bill = Bill()
+    datas = bill.all()
+    
+    title = '帳務列表'
+    return render(request,'product/billlist.html',locals())
+
+    

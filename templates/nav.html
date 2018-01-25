@@ -1,5 +1,5 @@
 <div class="container">
-    <nav class="navbar navbar-expand-lg navbar-light bg-light mb-3">
+    <nav class="navbar navbar-expand-lg navbar-light mb-3" style="background-color: #FFD2D2;">
         <a class="navbar-brand" href="#">禾喬漢堡</a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
             aria-expanded="false" aria-label="Toggle navigation">
@@ -21,7 +21,8 @@
                     <div class="dropdown-menu" aria-labelledby="navbarDropdown">
                         <a class="dropdown-item" href="{% url 'product:bill' %}">點餐</a>
                         <a class="dropdown-item" href="{% url 'product:index' %}">餐點管理</a>
-                        <a class="dropdown-item" href="{% url 'product:create' %}">新增餐點</a>                        
+                        <a class="dropdown-item" href="{% url 'product:create' %}">新增餐點</a>
+                        <a class="dropdown-item" href="{% url 'product:billlist' %}">帳務列表</a>                         
                     </div>
                 </li>
                 <li class="nav-item dropdown">

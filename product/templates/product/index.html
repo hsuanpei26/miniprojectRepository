@@ -19,7 +19,7 @@
 {% block body %}
 <div class="container">
     <a class="btn btn-primary mb-3" href="{% url 'product:create' %}" role="button"><i class="fa fa-plus-square" aria-hidden="true"></i> 新增</a>
-    <table class="table table-striped  mb-0">
+    <table class="table table-striped  mb-0" id="plist">
         <thead class="table-danger">
             <tr>
                 <th scope="col">項目</th>
@@ -47,3 +47,7 @@
     </table>
 </div>
 {% endblock %}
+{% block script %}
+<script>
+    $('#plist').DataTable();
+</script> {% endblock %}
